@@ -2497,6 +2497,7 @@
 		14609B63261DA1C800CC083D /* ChatRoom */ = {
 			isa = PBXGroup;
 			children = (
+				D2EA53A32A0B4E2F00663F4D /* Chatroom.swift */,
 				C8D8C38326A13EB600AD3FA0 /* ChatRoomchat_PROD.entitlements */,
 				C8D8C38226A13EAF00AD3FA0 /* ChatRoomchat_DEV.entitlements */,
 				C8D8C38126A03C0900AD3FA0 /* ChatRoomchat_UAT.entitlements */,
@@ -4093,7 +4094,6 @@
 		D29C81882A0E45CA00742AD2 /* WinstonTest */ = {
 			isa = PBXGroup;
 			children = (
-				D2EA53A32A0B4E2F00663F4D /* Chatroom.swift */,
 			);
 			path = WinstonTest;
 			sourceTree = "<group>";
