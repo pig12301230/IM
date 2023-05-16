@@ -1,0 +1,16 @@
+/* 
+  Localizable_meeChat.strings
+  ChatRoom
+
+  Created by ERay_Peng on 2022/10/12.
+  
+*/
+"about" = "关于覓聊";
+"gu_password" = "覓聊密码";
+"share_activity_title" = "分享覓聊";
+"share_activity_subtitle" = "加强好友间联系！下载免费覓聊App，串连好友";
+"setting_gu_password" = "设定覓聊密码";
+"get_verification_code" = "可透过简讯验证码重置覓聊密码\n即将传送验证码到";
+"photo_library_permission_alert_content" = "覓聊没有相片存取权限，建议前往系统设定，允许覓聊存取「所有相片」。";
+"first_time_exchange_hint" = "首次兑换后，覓聊积分将绑定此平台兑换账号，之后会锁定兑换到该平台账号！";
+"first_time_exchange_well_pay_hint" = "首次兑换后，覓聊积分将绑定此顺付兑换账号，之后会锁定兑换到该顺付账号！";

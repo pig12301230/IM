@@ -1,0 +1,14 @@
+Podfile.lock
+Gemfile.lock
+ChatRoom.xcworkspace/contents.xcworkspacedata
+ChatRoom.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+ChatRoom.xcworkspace/xcuserdata/
+ChatRoom.xcodeproj/xcuserdata/
+.idea/
+Pods/
+vendor/
+temp_*/
+.DS_Store
+build/
+fastlane/report.xml
+/culprits.txt

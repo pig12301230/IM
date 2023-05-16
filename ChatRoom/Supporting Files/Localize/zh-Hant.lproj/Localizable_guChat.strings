@@ -1,0 +1,16 @@
+/* 
+  Localizable_guChat.strings
+  ChatRoom
+
+  Created by ERay_Peng on 2022/10/12.
+  
+*/
+"about" = "關於股聊";
+"gu_password" = "股聊密碼";
+"share_activity_title" = "分享股聊";
+"share_activity_subtitle" = "加強好友間聯繫！下載免費股聊App，串連好友";
+"setting_gu_password" = "設定股聊密碼";
+"get_verification_code" = "可透過簡訊驗證碼重置股聊密碼\n即將傳送驗證碼到";
+"photo_library_permission_alert_content" = "股聊沒有像片存取權限，建議前往系統設定，允許股聊存取「所有像片」。";
+"first_time_exchange_hint" = "首次兌換後，股聊積分將綁定此平台兌換賬號，之後會鎖定兌換到該平台賬號！";
+"first_time_exchange_well_pay_hint" = "首次兌換後，股聊積分將綁定此順付兌換賬號，之後會鎖定兌換到該順付賬號！";

@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "gereralTooltipsEmojiBoxEmojiSad.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "gereralTooltipsEmojiBoxEmojiSad@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "gereralTooltipsEmojiBoxEmojiSad@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

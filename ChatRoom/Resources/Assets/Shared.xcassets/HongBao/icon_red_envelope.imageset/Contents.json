@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "icon_red_envelope.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "chat_bubble_envelope_x_icon_big_award.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "chat_bubble_envelope_x_icon_big_award@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "chat_bubble_envelope_x_icon_big_award@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

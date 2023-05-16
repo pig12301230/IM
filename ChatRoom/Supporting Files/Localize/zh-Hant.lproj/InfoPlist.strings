@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  ChatRoom
+
+  Created by saffi_peng on 2021/5/7.
+  
+*/
+
+NSPhotoLibraryUsageDescription = "開啟相簿授權後，就可以使用手機圖片了！";
+NSCameraUsageDescription = "請允許使用相機來拍照和編輯照片";

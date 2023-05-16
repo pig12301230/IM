@@ -1,0 +1,16 @@
+/* 
+  Localizable_guChat.strings
+  ChatRoom
+
+  Created by ERay_Peng on 2022/10/12.
+  
+*/
+"about" = "About GuChat";
+"gu_password" = "Password GuChat";
+"share_activity_title" = "Share GuChat";
+"share_activity_subtitle" = "Strengthen relationship with Friends! Download FREE GuChat App to connect others";
+"setting_gu_password" = "Set GuChat password";
+"get_verification_code" = "You can reset GuChat password by using SMS verification code \n About to send SMS verification code to";
+"photo_library_permission_alert_content" = "There is no photo access permissions for GuChat. It is recommended to go to the system settings to allow GuChat to access the 'all photos'.";
+"first_time_exchange_hint" = "After the first exchange, the GuChat points will bind this platform to redeem account, and then lock it to the platform account! Intersection Intersection";
+"first_time_exchange_well_pay_hint" = "After the first exchange, the GuChat points will bind this wellpay to redeem account, and then lock it to the wellpay account! Intersection Intersection";

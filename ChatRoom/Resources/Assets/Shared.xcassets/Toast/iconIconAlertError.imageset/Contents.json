@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "iconIconAlertError.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

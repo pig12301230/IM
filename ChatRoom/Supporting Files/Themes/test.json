@@ -1,0 +1,11 @@
+{
+    "Global": {
+        "barTintColor": "#EB4F38"
+    },
+    "Register": {
+        "separatorColor": "#000000"
+    },
+    "Login": {
+        "titleColor": "#FFFFFF"
+    }
+}

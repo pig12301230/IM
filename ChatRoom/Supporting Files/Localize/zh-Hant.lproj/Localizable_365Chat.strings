@@ -1,0 +1,16 @@
+/* 
+  Localizable_365Chat.strings
+  ChatRoom
+
+  Created by ERay_Peng on 2022/10/13.
+  
+*/
+"about" = "關於365";
+"gu_password" = "365密碼";
+"share_activity_title" = "分享365";
+"share_activity_subtitle" = "加強好友間聯繫！下載免費365App，串連好友";
+"setting_gu_password" = "設定365密碼";
+"get_verification_code" = "可透過簡訊驗證碼重置365密碼\n即將傳送驗證碼到";
+"photo_library_permission_alert_content" = "365沒有像片存取權限，建議前往系統設定，允許覓365取「所有像片」。";
+"first_time_exchange_hint" = "首次兌換後，365積分將綁定此平台兌換賬號，之後會鎖定兌換到該平台賬號！";
+"first_time_exchange_well_pay_hint" = "首次兌換後，365積分將綁定此順付兌換賬號，之後會鎖定兌換到該順付賬號！";

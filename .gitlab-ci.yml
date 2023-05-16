@@ -1,0 +1,85 @@
+variables:
+  LC_ALL: "en_US.UTF-8"
+  LANG: "en_US.UTF-8"
+  GIT_STRATEGY: fetch
+  FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: "10"
+  FASTLANE_XCODEBUILD_SETTINGS_RETRIES: "6"
+  
+before_script:
+  - export DEVELOPER_DIR="/Applications/Xcode-14.2.0.app/Contents/Developer"
+  # - bundle install
+  - export PATH=$PATH:/usr/bin
+  - export PATH=$PATH:/usr/var/rbenv/shims/gem
+  - export PATH=$PATH:/usr/local/sbin:/usr/local/share/npm/bin:~/bin:/usr/local/var/rbenv/shims/gem:$PATH
+  - chmod +x fastlane/
+  - chmod +x ./archive_ios.sh
+  - VARS=(${CI_COMMIT_REF_NAME//// })
+  - BRAND=${VARS[1]}
+
+stages:
+- build
+- unit_tests
+- release
+
+build:only:
+  stage: build
+  tags: 
+    - m1x-gitlab-runner
+  script:
+    - bundle exec fastlane build_only
+  only:
+    - merge_requests
+  artifacts:
+    when: on_success
+    paths:
+      - culprits.txt
+
+
+tests:unit_tests:
+  stage: unit_tests
+  tags:
+    - m1x-gitlab-runner
+  script:
+    - bundle exec fastlane unit_tests
+  only:
+    - merge_requests
+  artifacts:
+    when: on_success
+    reports:
+      junit: build/tests_report.xml
+
+build:dev:
+    stage: build
+    tags:
+      - m1x-gitlab-runner
+    only:
+     - test/build
+    script:
+      - ./archive_ios.sh dev
+
+build:test:
+    stage: build
+    tags:
+      - m1x-gitlab-runner
+    only:
+     - /^test\/.*$/
+    script:
+      - ./archive_ios.sh $BRAND prod
+
+release:uat:
+  stage: release
+  tags:
+   - m1x-gitlab-runner
+  only:
+    - /^release\/.*$/
+  script:
+    - ./archive_ios.sh $BRAND uat
+
+release:prod:
+  stage: release
+  tags:
+    - m1x-gitlab-runner
+  only:
+    - /^master\/.*$/
+  script:
+    - ./archive_ios.sh $BRAND prod

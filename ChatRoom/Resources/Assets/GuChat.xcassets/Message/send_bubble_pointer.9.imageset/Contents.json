@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "send_bubble_pointer.9@1x.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

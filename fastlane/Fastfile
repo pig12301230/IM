@@ -1,0 +1,165 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+WORKSPACE="ChatRoom.xcworkspace"
+PROJECT="ChatRoom.xcodeproj"
+TEAM_ID=ENV['TEAM_ID']
+
+
+platform :ios do
+
+  desc "Run unit tests, without build app."
+
+  lane :unit_tests do
+    podinstall
+    run_tests(workspace: WORKSPACE,
+            device: "iPhone 13",
+            skip_detect_devices: true,
+            output_directory: 'build',
+            reset_simulator: true,
+            derived_data_path: 'build',
+            testplan: 'TestPlan',
+            skip_build: true,
+            result_bundle: true,
+            output_types: "junit",
+            output_files: "tests_report.xml",
+            scheme: "UnitTests")
+  end
+
+  desc "只是測試 app 是否能正常地被 build 起來"
+  lane :build_only do
+    podinstall
+    gym(
+      workspace: WORKSPACE,
+      scheme: "GuChat_PROD",
+      include_symbols: false,
+      clean: true,
+      skip_package_ipa: true,
+      export_method: "enterprise",
+      skip_archive: true,
+      skip_codesigning: true,
+      analyze_build_time: true
+    )
+  end
+
+  lane :release_adhoc do 
+    archive
+    dsym_zip(
+      dsym_path: './build/ChatRoom.app.dSYM.zip',
+      all: true
+    )
+    sentry_upload_dsym(
+      auth_token: '12bace0d8e1f41e596d9b579736dfc9aa2c852018df7408fb742fa2675061f2d',
+      org_slug: 'sentry',
+      project_slug: ENV['SENTRY_PROJECT'],
+      url: 'https://sentry.pstdsf.com/',
+      dsym_path: './build/ChatRoom.app.dSYM.zip'
+    )
+  end
+
+  lane :release_UAT do    
+    archive
+
+    testflight(skip_waiting_for_build_processing: true)
+    upload_dSYM_to_sentry
+  end
+
+  private_lane :upload_dSYM_to_sentry do
+    download_dsyms(
+      app_identifier: ENV['APP_IDENTIFIER'],
+      version: lane_context[SharedValues::VERSION_NUMBER],
+      build_number: lane_context[SharedValues::BUILD_NUMBER]
+    )
+    sentry_upload_dsym(
+      auth_token: '12bace0d8e1f41e596d9b579736dfc9aa2c852018df7408fb742fa2675061f2d',
+      org_slug: 'sentry',
+      project_slug: ENV['SENTRY_PROJECT'],
+      url: 'https://sentry.pstdsf.com/'
+    )
+  end
+
+  private_lane :podinstall do
+    cocoapods(
+      clean_install: true,
+      repo_update: true
+    )
+  end
+
+  private_lane :archive do
+    
+    ensure_env_vars(env_vars: ['ARCHIVE_TYPE','BUILD_CONFIGURATION', 'SCHEME', 'OUTPUT_NAME', 'APP_IDENTIFIER'])
+
+    connectAppStoreWithAPIKey
+
+    # Runs pod install for the project
+    # cocoapods
+    podinstall
+    if ENV['ARCHIVE_TYPE'] != 'development'
+      # increment_build_number
+    version = get_version_number(xcodeproj: PROJECT, target: ENV['TARGET'])
+    latestBuildVersion = latest_testflight_build_number(version: version, app_identifier: ENV['APP_IDENTIFIER'], initial_build_number: 0)
+
+    increment_build_number({
+      build_number: latestBuildVersion + 1
+    })
+    end
+
+    # sigh get provisioning profile
+
+    sigh(
+      team_id: ENV['TEAM_ID'],
+      provisioning_name: ENV['PROVISION_PROFILE'],
+      app_identifier: ENV['APP_IDENTIFIER']
+    )
+
+    update_project_provisioning(
+      xcodeproj: ENV['PROJECT'],
+      target_filter: ENV['TARGET'],
+      build_configuration: ENV['BUILD_CONFIGURATION'],
+      code_signing_identity: "iPhone Distribution"
+    )
+
+    # build App
+    gym(
+      workspace: WORKSPACE,
+      configuration: ENV['BUILD_CONFIGURATION'],
+      scheme: ENV['SCHEME'],
+      clean: true,
+      output_directory: 'build',
+      include_symbols: true,
+      output_name: ENV['OUTPUT_NAME'],
+      export_method: ENV['ARCHIVE_TYPE'],
+      codesigning_identity: ENV['CODESIGNING_IDENTITY'],
+      export_options: {
+        provisioningProfiles: {
+          ENV['APP_IDENTIFIER'] => ENV['PROVISION_PROFILE']
+        }
+      }
+    )
+  end
+
+
+  private_lane :connectAppStoreWithAPIKey do 
+    api_key = app_store_connect_api_key(
+    key_id: ENV['API_KEY_ID'],
+    issuer_id: ENV['API_ISSUER_ID'],
+    key_filepath: ENV['API_KEY_PATH'],
+    duration: 1200, # optional (maximum 1200)
+    in_house: false # optional but may be required if using match/sigh
+  )
+  end
+end

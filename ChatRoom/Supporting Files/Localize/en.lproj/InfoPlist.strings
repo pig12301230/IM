@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  ChatRoom
+
+  Created by saffi_peng on 2021/4/28.
+  
+*/
+
+NSPhotoLibraryUsageDescription = "Not allowed to use Photo Library will caused cannot upload any photo.";
+NSCameraUsageDescription = "Please allow the camera to take pictures and edit photos.";

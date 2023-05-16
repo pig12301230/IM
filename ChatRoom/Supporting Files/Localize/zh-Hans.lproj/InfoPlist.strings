@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  ChatRoom
+
+  Created by saffi_peng on 2021/4/28.
+  
+*/
+
+NSPhotoLibraryUsageDescription = "开启相册授权后，就可以取用手机相片了！";
+NSCameraUsageDescription = "请允许取用相机来拍照和编辑相片";

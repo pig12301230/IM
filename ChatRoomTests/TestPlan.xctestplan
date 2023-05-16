@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "03873750-37AD-462B-9129-62B569496FFB",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:ChatRoom.xcodeproj",
+      "identifier" : "14609B76261DA1CA00CC083D",
+      "name" : "ChatRoomTests"
+    },
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:ChatRoom.xcodeproj",
+        "identifier" : "14609B76261DA1CA00CC083D",
+        "name" : "ChatRoomTests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(APP_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>Customized Property List</key>
+	<dict>
+		<key>APIBaseURL</key>
+		<string>$(API_BASE_URL)</string>
+		<key>LoadingFile</key>
+		<string>$(LOADING_FILE)</string>
+		<key>LocalizableFile</key>
+		<string>$(LOCALIZABLE_FILE)</string>
+		<key>Privacy_URL</key>
+		<string>$(PRIVACY_URL)</string>
+		<key>Sentry_DSN</key>
+		<string>$(SENTRY_DSN)</string>
+		<key>Sentry_Environment</key>
+		<string>$(SENTRY_ENVIRONMENT)</string>
+		<key>Service_URL</key>
+		<string>$(SERVICE_URL)</string>
+		<key>ThemeFileName</key>
+		<string>$(THEME_JSON)</string>
+		<key>WSBaseURL</key>
+		<string>$(WS_BASE_URL)</string>
+	</dict>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>请允许取用相机来拍照和编辑相片</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>开启相册授权后，就可以取用手机相片了！</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>开启相册授权后，就可以取用手机相片了！</string>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleDarkContent</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+</dict>
+</plist>
