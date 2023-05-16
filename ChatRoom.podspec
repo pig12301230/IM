@@ -21,6 +21,7 @@ s.homepage = "https://github.com/pig12301230/"
 
 # 6 - Replace this URL with your own Git URL from "Quick Setup"
 s.source = { :git => "https://github.com/pig12301230/IM.git", 
+             :branch => "main",
              :tag => "#{s.version}" }
 
 # 7
