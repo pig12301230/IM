@@ -39,7 +39,7 @@ s.dependency 'lottie-ios', '3.2.1'
 s.dependency 'RealmSwift', '10.33.0'
 s.dependency 'libPhoneNumber-iOS', '0.9.15'
 s.dependency 'SwiftLint', '0.43.1'
-s.dependency 'Sentry', :git => 'https://github.com/getsentry/sentry-cocoa.git', :tag => '7.27.0'
+s.dependency 'Sentry'
 s.dependency 'ZIPFoundation', '0.9.11'
 
 # 8
