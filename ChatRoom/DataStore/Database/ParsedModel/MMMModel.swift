@@ -161,33 +161,33 @@ enum NotifyOption: String, CaseIterable, OptionTypeProtocol {
     }
 }
 
-//protocol SettingStatusVMProtocol {
-//    associatedtype Option: CaseIterable
-//    var cellOptions: [Option] { get }
-//    var cellVMs: [TitleSwitchTableViewCellVM] { get }
-//
-//    func getStatus(_ option: Option) -> NotifyType
-//    func modifyStatus(_ option: Option, isOn: Bool)
-//
-//    func cellViewModel(at index: Int) -> TitleSwitchTableViewCellVM?
-//    func cancelAction(_ option: TitleSwitchTableViewCellVM.OptionType)
-//}
-//
-//extension SettingStatusVMProtocol {
-//    func cellViewModel(at index: Int) -> TitleSwitchTableViewCellVM? {
-//        guard self.cellVMs.count > index else {
-//            return nil
-//        }
-//
-//        return self.cellVMs[index]
-//    }
-//
-//    func cancelAction(_ option: OptionTypeProtocol) {
-//        if let cellVM = self.cellVMs.first(where: { $0.option.isEqual(to: option) }) {
-//            cellVM.cancelAction()
-//        }
-//    }
-//}
+protocol SettingStatusVMProtocol {
+    associatedtype Option: CaseIterable
+    var cellOptions: [Option] { get }
+    var cellVMs: [TitleSwitchTableViewCellVM] { get }
+
+    func getStatus(_ option: Option) -> NotifyType
+    func modifyStatus(_ option: Option, isOn: Bool)
+
+    func cellViewModel(at index: Int) -> TitleSwitchTableViewCellVM?
+    func cancelAction(_ option: TitleSwitchTableViewCellVM.OptionType)
+}
+
+extension SettingStatusVMProtocol {
+    func cellViewModel(at index: Int) -> TitleSwitchTableViewCellVM? {
+        guard self.cellVMs.count > index else {
+            return nil
+        }
+
+        return self.cellVMs[index]
+    }
+
+    func cancelAction(_ option: OptionTypeProtocol) {
+        if let cellVM = self.cellVMs.first(where: { $0.option.isEqual(to: option) }) {
+            cellVM.cancelAction()
+        }
+    }
+}
 
 enum ConversationNavigationBackType {
     case toOriginal

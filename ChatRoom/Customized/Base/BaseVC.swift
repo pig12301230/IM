@@ -49,10 +49,10 @@ public class BaseVC: UIViewController {
     var barType: NaviBarType = .default
     var isChildVC: Bool = false
     // 若頁面需要toast時才需要去實現
-//    lazy var toastManager: ToastManager = {
-//        let manager = ToastManager.init()
-//        return manager
-//    }()
+    lazy var toastManager: ToastManager = {
+        let manager = ToastManager.init()
+        return manager
+    }()
     
     private(set) lazy var btnBack: UIButton = {
         let btn = UIButton.init(frame: CGRect.init(origin: .zero, size: CGSize.init(width: 75, height: 44)))
