@@ -51,7 +51,7 @@ extension UIImage {
     }
 
     class func gifWithName(_ name: String) -> [UIImage]? {
-        guard let bundleURL = Bundle.main.url(forResource: name, withExtension: "gif") else {
+        guard let bundleURL = AppConfig.bundle.url(forResource: name, withExtension: "gif") else {
             print("SwiftGif: This image named \"\(name)\" does not exist")
             return nil
         }

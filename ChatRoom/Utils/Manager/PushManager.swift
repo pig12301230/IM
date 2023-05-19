@@ -82,7 +82,7 @@ extension PushManager: UNUserNotificationCenterDelegate {
 // MARK: - AVPlayer
 private extension PushManager {
     func setupAVPlayer() {
-        guard let url = Bundle.main.url(forResource: "bamboo_pop", withExtension: "wav") else {
+        guard let url = AppConfig.bundle.url(forResource: "bamboo_pop", withExtension: "wav") else {
             return
         }
         audio = AVPlayer(url: url)

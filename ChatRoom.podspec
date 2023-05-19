@@ -47,7 +47,9 @@ s.dependency 'ZIPFoundation', '0.9.11'
 s.source_files = "ChatRoom/**/*.{swift}"
 
 # 9
-s.resources = "ChatRoom/**/*.{png,jpeg,jpg,storyboard,xib,xcassets,json,plist,gif}"
+s.resource_bundles = {
+   "<ChatRoom>" => ['ChatRoom/**/*.{png,jpeg,jpg,storyboard,xib,xcassets,json,plist,gif}']
+}
 
 # 10
 s.swift_version = "4.2"

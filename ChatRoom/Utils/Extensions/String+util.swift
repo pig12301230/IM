@@ -15,7 +15,7 @@ extension String {
     }
     
     func localizedByTarget() -> String {
-        let str = NSLocalizedString(self, tableName: AppConfig.Info.localizableFileName, bundle: Bundle.main, value: "", comment: "")
+        let str = NSLocalizedString(self, tableName: AppConfig.Info.localizableFileName, bundle: AppConfig.bundle, value: "", comment: "")
         return (str.count > 0 ? str : self)
     }
     

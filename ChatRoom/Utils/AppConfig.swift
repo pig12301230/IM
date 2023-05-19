@@ -9,7 +9,7 @@
 import UIKit
 
 struct AppConfig {
-    
+    static var bundle = Bundle.main
     static let maxPhotoLimit: Int = 10
     static let imgDomainRefreshTime: Double = 1800 // 30 min
     
@@ -85,22 +85,22 @@ struct AppConfig {
     }
 
     struct Info {
-        static let brand = Bundle.main.getChatPropertyFromPlist(key: "Brand")
+        static let brand = bundle.getChatPropertyFromPlist(key: "Brand")
 
-        static let bundleID: String = Bundle.main.getPlistBy(key: "CFBundleIdentifier") ?? ""
-        static let appVersion = Bundle.main.getPlistBy(key: "CFBundleShortVersionString")
-        static let buildVersion = Bundle.main.getPlistBy(key: "CFBundleVersion")
-        static let bundleName = Bundle.main.getPlistBy(key: "CFBundleName")
-        static let appName = Bundle.main.getPlistBy(key: kCFBundleNameKey as String) ?? ""
-        static let targetName = Bundle.main.getPlistBy(key: "CFBundleExecutable")
-        static let environment = Bundle.main.getChatPropertyFromPlist(key: "Sentry_Environment")
-        static let sentryDSN = Bundle.main.getChatPropertyFromPlist(key: "Sentry_DSN")
+        static let bundleID: String = bundle.getPlistBy(key: "CFBundleIdentifier") ?? ""
+        static let appVersion = bundle.getPlistBy(key: "CFBundleShortVersionString")
+        static let buildVersion = bundle.getPlistBy(key: "CFBundleVersion")
+        static let bundleName = bundle.getPlistBy(key: "CFBundleName")
+        static let appName = bundle.getPlistBy(key: kCFBundleNameKey as String) ?? ""
+        static let targetName = bundle.getPlistBy(key: "CFBundleExecutable")
+        static let environment = bundle.getChatPropertyFromPlist(key: "Sentry_Environment")
+        static let sentryDSN = bundle.getChatPropertyFromPlist(key: "Sentry_DSN")
         static var isMaintaining: Bool = false
-        static var themeFileName = Bundle.main.getChatPropertyFromPlist(key: "ThemeFileName")
-        static var loadingFileName = Bundle.main.getChatPropertyFromPlist(key: "LoadingFile")
-        static var localizableFileName = Bundle.main.getChatPropertyFromPlist(key: "LocalizableFile")
-        static var servicePolicy = Bundle.main.getChatPropertyFromPlist(key: "Service_URL")
-        static var privacyPolicy = Bundle.main.getChatPropertyFromPlist(key: "Privacy_URL")
+        static var themeFileName = bundle.getChatPropertyFromPlist(key: "ThemeFileName")
+        static var loadingFileName = bundle.getChatPropertyFromPlist(key: "LoadingFile")
+        static var localizableFileName = bundle.getChatPropertyFromPlist(key: "LocalizableFile")
+        static var servicePolicy = bundle.getChatPropertyFromPlist(key: "Service_URL")
+        static var privacyPolicy = bundle.getChatPropertyFromPlist(key: "Privacy_URL")
     }
 
     struct Database {

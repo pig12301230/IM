@@ -12,8 +12,8 @@ import RxCocoa
 enum NetworkConfig {
 
     struct URL {
-        static var APIBaseURL = Bundle.main.getChatPropertyFromPlist(key: "APIBaseURL")
-        static var WSBaseURL = Bundle.main.getChatPropertyFromPlist(key: "WSBaseURL")                
+        static var APIBaseURL = AppConfig.bundle.getChatPropertyFromPlist(key: "APIBaseURL")
+        static var WSBaseURL = AppConfig.bundle.getChatPropertyFromPlist(key: "WSBaseURL")       
     }
 
     // Api Headers
