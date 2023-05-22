@@ -10,7 +10,7 @@ import RxSwift
 
 let appDelegate = UIApplication.shared.delegate as? AppDelegate
 
-@main
+//@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     private lazy var disposeBag: DisposeBag = {

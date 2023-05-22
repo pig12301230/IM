@@ -51,8 +51,8 @@ private extension Application {
             options.debug = true
             options.environment = AppConfig.Info.environment
             options.enableAppHangTracking = true
-            options.enableFileIOTracking = true
-            options.enableCoreDataTracking = true
+//            options.enableFileIOTracking = true
+//            options.enableCoreDataTracking = true
 
             options.enableUserInteractionTracing = true
             options.attachScreenshot = true

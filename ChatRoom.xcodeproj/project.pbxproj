@@ -283,9 +283,9 @@
 		AA5A070428F902B500F5CD45 /* MeeChat.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5A06FF28F902B500F5CD45 /* MeeChat.plist */; };
 		AA5A070528F902B500F5CD45 /* MeeChat.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5A06FF28F902B500F5CD45 /* MeeChat.plist */; };
 		AA5A070628F902B500F5CD45 /* MeeChat.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5A06FF28F902B500F5CD45 /* MeeChat.plist */; };
-		AA5A070728F902B500F5CD45 /* GuChat.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5A070028F902B500F5CD45 /* GuChat.plist */; };
-		AA5A070828F902B500F5CD45 /* GuChat.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5A070028F902B500F5CD45 /* GuChat.plist */; };
-		AA5A070928F902B500F5CD45 /* GuChat.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5A070028F902B500F5CD45 /* GuChat.plist */; };
+		AA5A070728F902B500F5CD45 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5A070028F902B500F5CD45 /* Info.plist */; };
+		AA5A070828F902B500F5CD45 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5A070028F902B500F5CD45 /* Info.plist */; };
+		AA5A070928F902B500F5CD45 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5A070028F902B500F5CD45 /* Info.plist */; };
 		AA88036327EAABB600355B4D /* FriendListViewControllerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA88036227EAABB600355B4D /* FriendListViewControllerVM.swift */; };
 		AA88036527EACEC900355B4D /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA88036427EACEC900355B4D /* FriendListViewController.swift */; };
 		AAA1D85D28C6D89100223079 /* BehaviorRelay+util.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA1D85C28C6D89100223079 /* BehaviorRelay+util.swift */; };
@@ -1266,7 +1266,7 @@
 		D25CB4042952F54E00546B0B /* HongBaoMessageRCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25CB4032952F54E00546B0B /* HongBaoMessageRCell.swift */; };
 		D25CB4062952F8F100546B0B /* HongBaoMessageLCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25CB4052952F8F100546B0B /* HongBaoMessageLCell.swift */; };
 		D276CB3D2A13256E00DB4D41 /* 365Chat.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5A06FE28F902B500F5CD45 /* 365Chat.plist */; };
-		D276CB3E2A13256E00DB4D41 /* GuChat.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5A070028F902B500F5CD45 /* GuChat.plist */; };
+		D276CB3E2A13256E00DB4D41 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5A070028F902B500F5CD45 /* Info.plist */; };
 		D276CB3F2A13256E00DB4D41 /* MeeChat.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5A06FF28F902B500F5CD45 /* MeeChat.plist */; };
 		D2860D7B2797B58E00A549DC /* AddMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2860D7A2797B58E00A549DC /* AddMemberViewController.swift */; };
 		D2860D7D2797C14800A549DC /* AddMemberViewControllerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2860D7C2797C14800A549DC /* AddMemberViewControllerVM.swift */; };
@@ -1931,7 +1931,7 @@
 		AA5430E9295E87C400955896 /* BalanceRecordHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceRecordHeaderView.swift; sourceTree = "<group>"; };
 		AA5A06FE28F902B500F5CD45 /* 365Chat.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 365Chat.plist; sourceTree = "<group>"; };
 		AA5A06FF28F902B500F5CD45 /* MeeChat.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MeeChat.plist; sourceTree = "<group>"; };
-		AA5A070028F902B500F5CD45 /* GuChat.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GuChat.plist; sourceTree = "<group>"; };
+		AA5A070028F902B500F5CD45 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA88036227EAABB600355B4D /* FriendListViewControllerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewControllerVM.swift; sourceTree = "<group>"; };
 		AA88036427EACEC900355B4D /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
 		AAA1D85C28C6D89100223079 /* BehaviorRelay+util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BehaviorRelay+util.swift"; sourceTree = "<group>"; };
@@ -2501,7 +2501,7 @@
 				C8D8C38326A13EB600AD3FA0 /* ChatRoomchat_PROD.entitlements */,
 				C8D8C38226A13EAF00AD3FA0 /* ChatRoomchat_DEV.entitlements */,
 				C8D8C38126A03C0900AD3FA0 /* ChatRoomchat_UAT.entitlements */,
-				AA9B85DE28F904E60015AA16 /* Info.plist */,
+				AA9B85DE28F904E60015AA16 /* PlistFile */,
 				C87525292668BDC7002A587C /* PhotoLibraryManager */,
 				C855B81D2644F22700CEF610 /* DataAccessManager */,
 				14609B64261DA1C800CC083D /* AppDelegate.swift */,
@@ -3361,14 +3361,14 @@
 			path = Maintenance;
 			sourceTree = "<group>";
 		};
-		AA9B85DE28F904E60015AA16 /* Info.plist */ = {
+		AA9B85DE28F904E60015AA16 /* PlistFile */ = {
 			isa = PBXGroup;
 			children = (
 				AA5A06FE28F902B500F5CD45 /* 365Chat.plist */,
-				AA5A070028F902B500F5CD45 /* GuChat.plist */,
+				AA5A070028F902B500F5CD45 /* Info.plist */,
 				AA5A06FF28F902B500F5CD45 /* MeeChat.plist */,
 			);
-			path = Info.plist;
+			path = PlistFile;
 			sourceTree = "<group>";
 		};
 		AAAE8A2A295AE03200C27518 /* Credit */ = {
@@ -4302,7 +4302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2AC1C2229C95D1B00A3F968 /* red_envelope_placeholder.json in Resources */,
-				AA5A070728F902B500F5CD45 /* GuChat.plist in Resources */,
+				AA5A070728F902B500F5CD45 /* Info.plist in Resources */,
 				146819EA2648C9780016567A /* loading_guChat.json in Resources */,
 				D2AC1C2629C95F0A00A3F968 /* red_envelope_skeleton.json in Resources */,
 				D2C8B69029E7AB8B0047AA58 /* Rolling-1s-200px.gif in Resources */,
@@ -4337,7 +4337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2AC1C2329C95D1B00A3F968 /* red_envelope_placeholder.json in Resources */,
-				AA5A070828F902B500F5CD45 /* GuChat.plist in Resources */,
+				AA5A070828F902B500F5CD45 /* Info.plist in Resources */,
 				AAB1ADDF28F6574900962BFD /* Theme_meeChat.json in Resources */,
 				D2AC1C2729C95F0A00A3F968 /* red_envelope_skeleton.json in Resources */,
 				D2C8B69129E7AB8B0047AA58 /* Rolling-1s-200px.gif in Resources */,
@@ -4376,7 +4376,7 @@
 				AAB1AF9628F7E41500962BFD /* Shared.xcassets in Resources */,
 				AAB3D78729C94F6A0051B9E4 /* float_placeholder.json in Resources */,
 				AAB1AF9728F7E41500962BFD /* bamboo_pop.wav in Resources */,
-				AA5A070928F902B500F5CD45 /* GuChat.plist in Resources */,
+				AA5A070928F902B500F5CD45 /* Info.plist in Resources */,
 				AAB1AFB028F7E7CE00962BFD /* 365Chat.xcassets in Resources */,
 				AAB1AFAB28F7E69600962BFD /* Theme_365Chat.json in Resources */,
 				AAB1AF9828F7E41500962BFD /* choose_background.wav in Resources */,
@@ -4394,7 +4394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D276CB3D2A13256E00DB4D41 /* 365Chat.plist in Resources */,
-				D276CB3E2A13256E00DB4D41 /* GuChat.plist in Resources */,
+				D276CB3E2A13256E00DB4D41 /* Info.plist in Resources */,
 				D276CB3F2A13256E00DB4D41 /* MeeChat.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

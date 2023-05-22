@@ -16,6 +16,6 @@ final class ThirdPartyLogAdapter: LogAdapterProtocol {
     func log(_ message: String) {
         let crumb = Breadcrumb()
         crumb.message = message
-        SentrySDK.addBreadcrumb(crumb: crumb)
+        SentrySDK.addBreadcrumb(crumb)
     }
 }
