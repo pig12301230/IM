@@ -2501,7 +2501,7 @@
 				C8D8C38326A13EB600AD3FA0 /* ChatRoomchat_PROD.entitlements */,
 				C8D8C38226A13EAF00AD3FA0 /* ChatRoomchat_DEV.entitlements */,
 				C8D8C38126A03C0900AD3FA0 /* ChatRoomchat_UAT.entitlements */,
-				AA9B85DE28F904E60015AA16 /* Info.plist */,
+				AA9B85DE28F904E60015AA16 /* PlistFile */,
 				C87525292668BDC7002A587C /* PhotoLibraryManager */,
 				C855B81D2644F22700CEF610 /* DataAccessManager */,
 				14609B64261DA1C800CC083D /* AppDelegate.swift */,
@@ -3361,14 +3361,14 @@
 			path = Maintenance;
 			sourceTree = "<group>";
 		};
-		AA9B85DE28F904E60015AA16 /* Info.plist */ = {
+		AA9B85DE28F904E60015AA16 /* PlistFile */ = {
 			isa = PBXGroup;
 			children = (
 				AA5A06FE28F902B500F5CD45 /* 365Chat.plist */,
 				AA5A070028F902B500F5CD45 /* GuChat.plist */,
 				AA5A06FF28F902B500F5CD45 /* MeeChat.plist */,
 			);
-			path = Info.plist;
+			path = PlistFile;
 			sourceTree = "<group>";
 		};
 		AAAE8A2A295AE03200C27518 /* Credit */ = {

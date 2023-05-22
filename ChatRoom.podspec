@@ -8,7 +8,7 @@ s.summary = "Winstonnnnn."
 s.requires_arc = true
 
 # 2
-s.version = "0.1.4"
+s.version = "0.1.5"
 
 # 3
 s.license = { :type => "MIT", :file => "LICENSE" }
@@ -37,8 +37,8 @@ s.dependency 'SnapKit', '5.0.1'                # layout
 s.dependency 'SwiftTheme', '0.6.0'             # color style
 s.dependency 'IQKeyboardManagerSwift', '6.0.4'
 s.dependency 'lottie-ios', '3.2.1'
-s.dependency 'RealmSwift', '10.33.0'
-s.dependency 'libPhoneNumber-iOS', '0.9.15'
+s.dependency 'RealmSwift', '10.33.0', :modular_headers => true
+s.dependency 'libPhoneNumber-iOS', '0.9.15', :modular_headers => true
 s.dependency 'SwiftLint', '0.43.1'
 s.dependency 'Sentry'
 s.dependency 'ZIPFoundation', '0.9.11'
